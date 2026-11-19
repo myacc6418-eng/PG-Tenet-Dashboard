@@ -1,0 +1,6 @@
+{
+  "name": "PG Finder",
+  "description": "Consumer-facing PG accommodation discovery, QR-based joining, and tenant stay management application.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

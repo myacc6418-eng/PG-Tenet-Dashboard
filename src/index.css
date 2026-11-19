@@ -1,0 +1,62 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-sans: "DM Sans", -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+
+  --color-primary: #047857;
+  --color-primary-dark: #065F46;
+  --color-accent: #10B981;
+  --color-soft-green: #ECFDF5;
+  --color-canvas: #F8FAFC;
+  --color-surface: #FFFFFF;
+  --color-ink: #111827;
+  --color-muted: #6B7280;
+  --color-border: #E5E7EB;
+  --color-warning: #F59E0B;
+  --color-danger: #EF4444;
+  --color-success: #16A34A;
+}
+
+@layer base {
+  html {
+    font-family: var(--font-sans);
+    background-color: #F8FAFC;
+    color: #111827;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  h1, h2, h3, h4, .font-display {
+    font-family: var(--font-display);
+  }
+
+  .tabular-nums {
+    font-variant-numeric: tabular-nums;
+  }
+}
+
+.pb-safe {
+  padding-bottom: env(safe-area-inset-bottom, 0px);
+}
+
+.pt-safe {
+  padding-top: env(safe-area-inset-top, 0px);
+}
+
+/* Subtle custom scrollbar for horizontal PG carousels */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
